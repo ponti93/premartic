@@ -1,12 +1,9 @@
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import { auth } from '../services/firebase';
-import { onAuthStateChanged, User, signOut as firebaseSignOut } from 'firebase/auth';
+import React, { createContext, useContext, useState } from 'react';
 import { UserProfile } from '../types';
-import { getUserProfile, ensureUserProfile } from '../services/persistenceService';
 
 interface AuthContextType {
-  user: User | null;
+  user: any | null;
   profile: UserProfile | null;
   loading: boolean;
   signOut: () => Promise<void>;
@@ -16,40 +13,33 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
-  const [profile, setProfile] = useState<UserProfile | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  const fetchProfile = async (uid: string, email: string | null) => {
-    // Ensure the database record exists for this user (Firebase Auth <-> Firestore Sync)
-    if (email) await ensureUserProfile(uid, email);
-    
-    const p = await getUserProfile(uid);
-    setProfile(p);
+  // Mock user for demo purposes - always logged in
+  const mockUser = {
+    uid: 'demo-user',
+    email: 'demo@premartic.com',
+    displayName: 'Demo User'
   };
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      setUser(currentUser);
-      if (currentUser) {
-        await fetchProfile(currentUser.uid, currentUser.email);
-      } else {
-        setProfile(null);
-      }
-      setLoading(false);
-    });
+  const mockProfile: UserProfile = {
+    id: 'demo-user',
+    email: 'demo@premartic.com',
+    tokens: 50,
+    tier: 'free',
+    role: 'user',
+    session_started: new Date().toISOString(),
+    last_active: new Date().toISOString()
+  };
 
-    return () => unsubscribe();
-  }, []);
+  const [user] = useState<any>(mockUser);
+  const [profile] = useState<UserProfile>(mockProfile);
+  const [loading] = useState(false);
 
   const signOut = async () => {
-    await firebaseSignOut(auth);
+    // Mock sign out - do nothing
   };
 
   const refreshProfile = async () => {
-    if (user) {
-      await fetchProfile(user.uid, user.email);
-    }
+    // Mock refresh - do nothing
   };
 
   return (

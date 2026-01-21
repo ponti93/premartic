@@ -637,13 +637,7 @@ const LandingPage: React.FC = () => {
                 <li><button onClick={() => setIsContactModalOpen(true)} className="hover:text-white transition-colors cursor-pointer text-left">Contact Us</button></li>
               </ul>
             </div>
-            <div>
-              <h4 className="text-white font-bold mb-6">Company</h4>
-              <ul className="space-y-4 text-sm text-slate-400">
-                <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
-                <li><Link to="/pricing" className="hover:text-white transition-colors">Pricing</Link></li>
-              </ul>
-            </div>
+
           </div>
         </div>
         <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 text-xs text-slate-500 flex justify-between">
