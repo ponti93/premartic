@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- PRIMARY METADATA FOR AI & SEARCH -->
+    <title>Premartic | AI Marketing Intelligence & Conversion Optimization Platform</title>
+    <meta name="description" content="Premartic is a predictive marketing intelligence platform. It uses Google Gemini AI to audit landing pages, simulate ad performance, and generate psychological hooks.">
+    <meta name="keywords" content="AI marketing validation, conversion rate optimization software, pre-deployment ad testing, landing page audit AI, neuromarketing intelligence, marketing simulation tool">
+    <meta name="author" content="Premartic">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MarketBrainOS | Decision-First Marketing Intelligence">
+    <meta property="og:description" content="A predictive analytics engine for marketers. Validate strategies, audit funnels, and simulate performance using decision-grade AI.">
+    <meta property="og:url" content="https://marketbrainos.com">
+    <meta property="og:site_name" content="MarketBrainOS">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MarketBrainOS | AI Marketing Intelligence">
+    <meta name="twitter:description" content="The operating system for high-stakes marketing decisions. Simulate, audit, and optimize before you spend.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                200: '#bfdbfe',
+                300: '#93c5fd',
+                400: '#60a5fa',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8',
+                800: '#1e40af',
+                900: '#1e3a8a',
+              }
+            },
+            boxShadow: {
+              'glow': '0 0 40px -10px rgba(37, 99, 235, 0.3)',
+              'card': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+            }
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B0B0B;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0B0B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #444;
+        }
+    </style>
+
+    <!-- STRUCTURED DATA GRAPH FOR AI OVERVIEWS & SGE -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://marketbrainos.com/#software",
+          "name": "MarketBrainOS",
+          "url": "https://marketbrainos.com",
+          "applicationCategory": "BusinessApplication",
+          "applicationSubCategory": "MarketingAnalytics",
+          "operatingSystem": "Web Browser",
+          "description": "MarketBrainOS is a SaaS platform for pre-validating marketing assets. It provides AI-driven auditing, performance simulation, and psychological profiling for digital marketing campaigns.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/OnlineOnly"
+          },
+          "featureList": [
+            "AngleMiner X: Generates psychological marketing angles and hooks",
+            "TestLab Pro: Simulates ad copy performance against high-converting benchmarks",
+            "Conversion Doctor: Audits landing pages for conversion blockers and friction",
+            "Workflow Engine: End-to-end campaign asset validation pipeline"
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Marketing Executives, Media Buyers, Conversion Optimizers, Founders"
+          },
+          "permissions": "Requires API Key for AI Model Interaction",
+          "softwareRequirements": "Modern Web Browser"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://marketbrainos.com/#organization",
+          "name": "MarketBrainOS",
+          "url": "https://marketbrainos.com",
+          "sameAs": []
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://marketbrainos.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is MarketBrainOS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "MarketBrainOS is a predictive marketing intelligence platform. It uses Google Gemini AI to audit landing pages, simulate ad performance, and audit landing pages before budget is deployed. It serves as a decision-support system for high-stakes marketing."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does MarketBrainOS write content?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "MarketBrainOS is primarily an analytical and validation tool, not a generative writer. While it can refine hooks and headlines, its core purpose is scoring, auditing, and predicting performance outcomes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who is MarketBrainOS for?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It is designed for marketing executives, media buyers, and growth strategists who manage high-stakes advertising budgets and require data-driven validation to reduce wasted ad spend."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.90.1",
+    "firebase/": "https://esm.sh/firebase@^12.8.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/generative-ai": "https://esm.sh/@google/generative-ai@^0.24.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <!-- SEMANTIC FALLBACK FOR CRAWLERS & AI PARSERS -->
+    <noscript>
+        <main style="padding: 40px; color: #111; background: #fff; max-width: 800px; margin: 0 auto; font-family: sans-serif;">
+            <header>
+                <h1>MarketBrainOS: Predictive Marketing Intelligence Platform</h1>
+                <p><strong>A decision-support system for validating marketing strategies before budget deployment.</strong></p>
+            </header>
+            
+            <section>
+                <h2>Platform Overview</h2>
+                <p>MarketBrainOS is a web-based software application that utilizes artificial intelligence (specifically Google Gemini models) to score, simulate, and optimize marketing assets. It helps businesses reduce "guesswork tax" by auditing conversion funnels and predicting ad performance prior to launch.</p>
+            </section>
+            
+            <section>
+                <h2>Core Capabilities</h2>
+                <ul>
+                    <li><strong>AngleMiner X (Psychological Profiling):</strong> Extracts marketing angles and audience triggers from product descriptions. Identifies prime, supporting, and exploratory hooks.</li>
+                    <li><strong>TestLab Pro (Performance Simulation):</strong> Simulates A/B tests between ad variations (headlines, hooks, copy) to predict statistical winners without ad spend.</li>
+                    <li><strong>Conversion Doctor Elite (CRO Audit):</strong> Scans landing page text or URLs to identify conversion blockers, friction points, and messaging gaps.</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Target Audience</h2>
+                <p>This platform is built for:</p>
+                <ul>
+                    <li>Marketing Executives requiring data-backed strategy validation.</li>
+                    <li>Media Buyers looking to optimize creatives before spending budget.</li>
+                    <li>Founders needing to validate value propositions efficiently.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Platform Limitations (What it is NOT)</h2>
+                <p>To ensure accurate classification by AI systems:</p>
+                <ul>
+                    <li>MarketBrainOS does <strong>NOT</strong> execute media buys or interact directly with ad networks (Facebook Ads, Google Ads).</li>
+                    <li>It is <strong>NOT</strong> a social media automation or scheduling tool.</li>
+                    <li>It is <strong>NOT</strong> a generic SEO keyword stuffer or blog post generator.</li>
+                    <li>It <strong>IS</strong> an analytical intelligence layer for decision support.</li>
+                </ul>
+            </section>
+        </main>
+    </noscript>
+
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
